@@ -44,6 +44,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     "rest_framework",
+    "drf_spectacular",
 ]
 
 MY_APPS = [
@@ -130,6 +131,7 @@ SIMPLE_JWT = {
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 2,
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 # Internationalization
@@ -155,3 +157,11 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "MUSIC LIBRARY REFACTOR",
+    "DESCRIPTION": "Foi pedido que você acesse um projeto antigo, no qual os usuários poderiam se cadastrar, cadastrar álbuns e músicas. Esse projeto foi desenvolvido com Django, utilizando APIView, Serializer e SQLite3. Ele deseja que você faça uma refatoração, aplicando os conceitos de Generic View, Model Serializer e alterando o banco de dados para o PostgreSQL.",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": True,
+    # OTHER SETTINGS
+}
